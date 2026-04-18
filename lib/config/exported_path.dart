@@ -1,0 +1,102 @@
+//system//
+export 'dart:math';
+export 'dart:async';
+export 'dart:convert';
+export 'package:flutter/foundation.dart';
+export 'package:flutter/material.dart';
+export 'package:flutter/services.dart';
+export 'package:flutter/gestures.dart';
+
+//screens//
+export 'package:indapur_citizen/view/onboarding/view/splash_screen.dart';
+export 'package:indapur_citizen/view/onboarding/view/page_view.dart';
+export 'package:indapur_citizen/view/onboarding/widget/onboarding_page.dart';
+export 'package:indapur_citizen/view/onboarding/view/otp_verification.dart';
+export 'package:indapur_citizen/view/navigator/view/home_view.dart';
+export 'package:indapur_citizen/view/onboarding/view/sign_up.dart';
+export 'package:indapur_citizen/view/profile/view/profile.dart';
+export 'package:indapur_citizen/view/links/view/link_screen.dart';
+export 'package:indapur_citizen/view/about_us/view/about_us.dart';
+export 'package:indapur_citizen/view/complaint/view/complaint_screen.dart';
+export 'package:indapur_citizen/utils/app_under_maintainance.dart';
+export 'package:indapur_citizen/view/complaint/widget/complaint_summery.dart';
+export 'package:indapur_citizen/view/home_view/widgets/complaint_form.dart';
+export 'package:indapur_citizen/view/home_view/widgets/notification_list.dart';
+export 'package:indapur_citizen/view/home_view/view/home_screen.dart';
+export 'package:indapur_citizen/utils/pdf_view.dart';
+export 'package:indapur_citizen/utils/delete_account.dart';
+
+//controller//
+export 'package:indapur_citizen/view/onboarding/controller/onboarding_controller.dart';
+export 'package:indapur_citizen/utils/language_controller.dart';
+export 'package:indapur_citizen/view/navigator/controller/navigator_controller.dart';
+export 'package:indapur_citizen/view/about_us/controller/about_controller.dart';
+export 'package:indapur_citizen/view/links/controller/link_controller.dart';
+export 'package:indapur_citizen/view/complaint/controller/complaint_controller.dart';
+export 'package:indapur_citizen/view/home_view/controller/get_notification.dart';
+export 'package:indapur_citizen/view/home_view/controller/delete_account_controller.dart';
+export 'package:indapur_citizen/view/home_view/controller/home_controller.dart';
+export 'package:indapur_citizen/view/complaint/controller/get_summary.dart';
+export 'package:indapur_citizen/view/home_view/controller/add_complaint_controller.dart';
+export 'package:indapur_citizen/view/home_view/controller/update_firebase_token.dart';
+export 'package:indapur_citizen/view/profile/controller/profile_controller.dart';
+export 'package:indapur_citizen/view/onboarding/controller/splash_controller.dart';
+
+//widgets//
+export 'package:indapur_citizen/main.dart';
+export 'package:indapur_citizen/config/all_url.dart';
+export 'package:indapur_citizen/utils/update_app.dart';
+export 'package:indapur_citizen/utils/color.dart';
+export 'package:indapur_citizen/utils/elevated_button_theme.dart';
+export 'package:indapur_citizen/utils/text_form_field_theme.dart';
+export 'package:indapur_citizen/utils/theme.dart';
+export 'package:indapur_citizen/utils/language.dart';
+export 'package:indapur_citizen/utils/validator.dart';
+export 'package:indapur_citizen/utils/check_internet.dart';
+export 'package:indapur_citizen/utils/helper.dart';
+export 'package:indapur_citizen/utils/loader.dart';
+export 'package:indapur_citizen/utils/appbar_widget.dart';
+export 'package:indapur_citizen/utils/utube_player.dart';
+export 'package:indapur_citizen/view/home_view/widgets/departments_tile.dart';
+export 'package:indapur_citizen/view/home_view/widgets/drawer_widget.dart';
+export 'package:indapur_citizen/utils/notification_service.dart';
+export 'package:indapur_citizen/di/injection.dart';
+export 'package:indapur_citizen/view/complaint/widget/complaint_card.dart';
+export 'package:indapur_citizen/utils/custom_text.dart';
+export 'package:indapur_citizen/utils/utils.dart';
+export '../../../utils/custom_attachment_preview.dart';
+export '../../../utils/custom_card.dart';
+export '../../../utils/custom_status.dart';
+export 'package:indapur_citizen/config/api_client.dart';
+export 'package:indapur_citizen/config/image_path.dart';
+export 'package:indapur_citizen/utils/dialogs.dart';
+export 'package:indapur_citizen/utils/custom_update_history.dart';
+
+//plugins
+export 'package:get/get.dart';
+export 'package:file_picker/file_picker.dart';
+export 'package:image_picker/image_picker.dart';
+export 'package:firebase_core/firebase_core.dart';
+export 'package:firebase_messaging/firebase_messaging.dart';
+export 'package:url_launcher/url_launcher.dart';
+export 'package:path_provider/path_provider.dart';
+export 'package:flutter_pdfview/flutter_pdfview.dart';
+export 'package:geolocator/geolocator.dart';
+export 'package:shared_preferences/shared_preferences.dart';
+export 'package:package_info_plus/package_info_plus.dart';
+export 'package:carousel_slider/carousel_slider.dart';
+export 'package:floating_draggable_widget/floating_draggable_widget.dart';
+export 'package:youtube_player_flutter/youtube_player_flutter.dart';
+export 'package:flutter_local_notifications/flutter_local_notifications.dart';
+export 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+export 'package:get_it/get_it.dart';
+export 'package:injectable/injectable.dart';
+export 'package:hugeicons/hugeicons.dart';
+export 'package:dotted_border/dotted_border.dart';
+export 'package:widget_zoom/widget_zoom.dart';
+export 'package:connectivity_plus/connectivity_plus.dart';
+export 'package:pinput/pinput.dart';
+export 'package:sms_autofill/sms_autofill.dart' hide Orientation;
+export 'package:flutter_file_downloader/flutter_file_downloader.dart';
+export 'package:flutter_widget_from_html/flutter_widget_from_html.dart' hide ImageSource;
+export 'package:open_filex/open_filex.dart';

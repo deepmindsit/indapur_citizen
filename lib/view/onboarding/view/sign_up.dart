@@ -137,7 +137,7 @@ class _SignupState extends State<Signup> {
                 border: Border.all(color: primaryColor),
               ),
             ),
-            onCompleted: (pin) => debugPrint('Entered OTP: $pin'),
+            onCompleted: (pin) {},
           ),
         ),
       ],

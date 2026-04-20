@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         );
         return MediaQuery(data: newMediaQueryData, child: child!);
       },
-      title: 'My Indapur',
+      title: 'My Indapur NP',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       translations: Languages(),

@@ -22,7 +22,6 @@ class GetSummary extends GetxController {
         'lang': language.isEnglish.value ? 'en' : 'mr',
       });
       checkLogin(res['user_login']);
-      print(res['data']);
       res['common']['status'] == true
           ? summaryList.value = res['data']
           : summaryList.value = {};

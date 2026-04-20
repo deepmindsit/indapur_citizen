@@ -267,6 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           () => ComplaintForm(
                             deptId: controller.departmentList[index]['id']
                                 .toString(),
+                            deptName: controller.departmentList[index]['name'].toString(),
                           ),
                         );
                       },
@@ -354,6 +355,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Get.to(
               () => ComplaintForm(
                 deptId: controller.departmentList[index]['id'].toString(),
+                deptName: controller.departmentList[index]['name'].toString(),
               ),
             );
           },

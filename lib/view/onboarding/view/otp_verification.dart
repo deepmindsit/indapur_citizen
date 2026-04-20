@@ -312,7 +312,7 @@ class _OtpVerificationState extends State<OtpVerification> with CodeAutoFill {
                 border: Border.all(color: primaryColor),
               ),
             ),
-            onCompleted: (pin) => debugPrint('Entered OTP: $pin'),
+            onCompleted: (pin) {},
           ),
         ),
       ],

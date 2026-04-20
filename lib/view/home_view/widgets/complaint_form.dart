@@ -2,8 +2,13 @@ import 'package:indapur_citizen/config/exported_path.dart';
 
 class ComplaintForm extends StatefulWidget {
   final String deptId;
+  final String deptName;
 
-  const ComplaintForm({super.key, required this.deptId});
+  const ComplaintForm({
+    super.key,
+    required this.deptId,
+    required this.deptName,
+  });
 
   @override
   State<ComplaintForm> createState() => _ComplaintFormState();
@@ -34,7 +39,14 @@ class _ComplaintFormState extends State<ComplaintForm> {
         backgroundColor: Colors.grey.withValues(alpha: 0.1),
         surfaceTintColor: Colors.grey.withValues(alpha: 0.1),
         titleSpacing: 0,
-        title: Text('Complaint Registration'.tr),
+        title: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text('${widget.deptName.tr} '),
+            Text('Complaint Registration'.tr),
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

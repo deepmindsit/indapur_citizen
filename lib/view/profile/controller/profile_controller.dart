@@ -38,13 +38,10 @@ class ProfileController extends GetxController {
 
       final prefs = await SharedPreferences.getInstance();
       var userId = prefs.getString('user_id');
-      final res = await apiClient.post(
-        Urls.updateProfile,
-        {
-          'user_id': userId,
-          'name': name,
-        },
-      );
+      final res = await apiClient.post(Urls.updateProfile, {
+        'user_id': userId,
+        'name': name,
+      });
       if (res['common']['status'] == true) {
         checkLogin(res['user_login']);
       }
@@ -58,14 +55,11 @@ class ProfileController extends GetxController {
   }
 
   Future getPolicy({required String slug}) async {
-    isLoading.value = true;
+    print('slug');
+    print(slug);
     try {
-      final res = await apiClient.post(
-        Urls.legalPage,
-        {
-          'slug': slug,
-        },
-      );
+      isLoading.value = true;
+      final res = await apiClient.post(Urls.legalPage, {'slug': slug});
       res['common']['status'] == true
           ? privacyData.value = res['data']
           : privacyData.value = {};

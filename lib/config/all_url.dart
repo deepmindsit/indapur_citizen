@@ -3,7 +3,8 @@ class Urls {
 
   // static const String _baseURL = "http://192.168.29.37/myindapurnp/api/v1";
   // static const String _baseURL = "https://myindapurnp.diabot.in/api/v1";
-  static const String _baseURL = "https://beta.indapurnp.in/api/v1";
+  // static const String _baseURL = "https://beta.indapurnp.in/api/v1";
+  static const String _baseURL = "https://indapurnp.in/api/v1";
   static String sendOtp = "$_baseURL/send-otp";
   static String register = "$_baseURL/register";
   static String verifyOtp = "$_baseURL/verify-otp";

@@ -10,7 +10,7 @@ String? emailValidator(String? value) {
   return null;
 }
 
-String? passwordValidator(String? value,) {
+String? passwordValidator(String? value) {
   if (value == null || value.length < 5) {
     return 'Password must be at least 5 characters long';
   } else {
@@ -31,10 +31,7 @@ String? nameValidator(String? value) {
 String? validatePhoneNumber(String value) {
   if (!RegExp(r'(^(?:[+0]9)?[0-9]{10,12}$)').hasMatch(value)) {
     return 'Enter a valid phone number';
-  }
-
-
-  else {
+  } else {
     return null;
   }
 }

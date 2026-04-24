@@ -39,12 +39,8 @@ class _ComplaintFormState extends State<ComplaintForm> {
         backgroundColor: Colors.grey.withValues(alpha: 0.1),
         surfaceTintColor: Colors.grey.withValues(alpha: 0.1),
         titleSpacing: 0,
-        title:Text(
-          '${widget.deptName.tr} ',
-          style: TextStyle(fontSize: 20),
-        ),
+        title: Text('${widget.deptName.tr} ', style: TextStyle(fontSize: 20)),
       ),
-
 
       //   Row(
       //     crossAxisAlignment: CrossAxisAlignment.center,
@@ -86,7 +82,12 @@ class _ComplaintFormState extends State<ComplaintForm> {
                 headerRequired(header: 'Nearest Landmark', isRequired: true),
                 TextFormField(
                   controller: controller.landMarkController,
-                  validator: (value) => nameValidator(value!),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Please enter Nearest Landmark';
+                    }
+                    return null;
+                  },
                   decoration: InputDecoration(
                     border: border(),
                     enabledBorder: border(),
@@ -103,7 +104,12 @@ class _ComplaintFormState extends State<ComplaintForm> {
                 ),
                 TextFormField(
                   controller: controller.descriptionController,
-                  validator: (value) => nameValidator(value!),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Please enter description';
+                    }
+                    return null;
+                  },
                   maxLines: 50,
                   minLines: 3,
                   decoration: InputDecoration(
@@ -435,9 +441,7 @@ class _ComplaintFormState extends State<ComplaintForm> {
             );
           }).toList(),
           onChanged: (newValue) {
-            // setState(() {
             controller.ward.value = newValue.toString();
-            // });
           },
         ),
       ),

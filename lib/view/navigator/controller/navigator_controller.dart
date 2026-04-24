@@ -1,3 +1,5 @@
+import 'package:indapur_citizen/utils/policy_data.dart';
+
 import '../../../config/exported_path.dart';
 
 @lazySingleton
@@ -10,6 +12,7 @@ class BottomNavigationPageController extends GetxController {
     const HomeScreen(),
 
     const AboutUs(),
+    //  PolicyData(slug: '',),
     const ComplaintTest(),
     const Links(),
     const Profile(),

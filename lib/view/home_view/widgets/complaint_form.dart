@@ -39,15 +39,32 @@ class _ComplaintFormState extends State<ComplaintForm> {
         backgroundColor: Colors.grey.withValues(alpha: 0.1),
         surfaceTintColor: Colors.grey.withValues(alpha: 0.1),
         titleSpacing: 0,
-        title: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text('${widget.deptName.tr} '),
-            Text('Complaint Registration'.tr),
-          ],
+        title:Text(
+          '${widget.deptName.tr} ',
+          style: TextStyle(fontSize: 20),
         ),
       ),
+
+
+      //   Row(
+      //     crossAxisAlignment: CrossAxisAlignment.center,
+      //     mainAxisAlignment: MainAxisAlignment.start,
+      //     children: [
+      //       Expanded(
+      //         child: Text(
+      //           '${widget.deptName.tr} ',
+      //           style: TextStyle(fontSize: 20),
+      //         ),
+      //       ),
+      //       // Expanded(
+      //       //   child: Text(
+      //       //     'Complaint Registration'.tr,
+      //       //     style: TextStyle(fontSize: 16),
+      //       //   ),
+      //       // ),
+      //     ],
+      //   ),
+      // ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(

@@ -16,8 +16,8 @@ class _NotificationListState extends State<NotificationList> {
       checkInternetAndShowPopup();
     });
     notificationData.firstLoad();
-    notificationData.controller =
-        ScrollController()..addListener(notificationData.loadMore);
+    notificationData.controller = ScrollController()
+      ..addListener(notificationData.loadMore);
     super.initState();
   }
 
@@ -46,36 +46,35 @@ class _NotificationListState extends State<NotificationList> {
         ),
       ),
       body: Obx(
-        () =>
-            notificationData.isFirstLoadRunning.isTrue
-                ? LoadingWidget(color: primaryBlack)
-                : notificationData.notificationList.isEmpty
-                ? emptyData()
-                : Column(
-                  children: [
-                    Expanded(child: mainData()),
-                    if (notificationData.isLoadMoreRunning.isTrue)
-                      const Padding(
-                        padding: EdgeInsets.only(top: 10, bottom: 20),
-                        child: Center(child: CircularProgressIndicator()),
-                      ),
-                    if (notificationData.hasNextPage.isFalse)
-                      Container(
-                        padding: const EdgeInsets.only(top: 20, bottom: 20),
-                        // color: Colors.amber,
-                        child: Center(
-                          child: Text(
-                            'You have reached at end of this page'.tr,
-                            style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey,
-                            ),
+        () => notificationData.isFirstLoadRunning.isTrue
+            ? LoadingWidget(color: primaryBlack)
+            : notificationData.notificationList.isEmpty
+            ? emptyData()
+            : Column(
+                children: [
+                  Expanded(child: mainData()),
+                  if (notificationData.isLoadMoreRunning.isTrue)
+                    const Padding(
+                      padding: EdgeInsets.only(top: 10, bottom: 20),
+                      child: Center(child: CircularProgressIndicator()),
+                    ),
+                  if (notificationData.hasNextPage.isFalse)
+                    Container(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20),
+                      // color: Colors.amber,
+                      child: Center(
+                        child: Text(
+                          'You have reached at end of this page'.tr,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey,
                           ),
                         ),
                       ),
-                  ],
-                ),
+                    ),
+                ],
+              ),
       ),
     );
   }
@@ -145,15 +144,13 @@ class _NotificationListState extends State<NotificationList> {
                       height: 50,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color:
-                            !isRead
-                                ? Colors.blue.shade50
-                                : Colors.grey.shade100,
+                        color: !isRead
+                            ? Colors.blue.shade50
+                            : Colors.grey.shade100,
                         border: Border.all(
-                          color:
-                              !isRead
-                                  ? Colors.blue.shade200
-                                  : Colors.grey.shade300,
+                          color: !isRead
+                              ? Colors.blue.shade200
+                              : Colors.grey.shade300,
                           width: 1.5,
                         ),
                       ),
@@ -161,10 +158,9 @@ class _NotificationListState extends State<NotificationList> {
                         !isRead
                             ? Icons.notifications_active_rounded
                             : Icons.notifications_rounded,
-                        color:
-                            !isRead
-                                ? Colors.blue.shade600
-                                : Colors.grey.shade600,
+                        color: !isRead
+                            ? Colors.blue.shade600
+                            : Colors.grey.shade600,
                         size: 24,
                       ),
                     ),
@@ -204,14 +200,12 @@ class _NotificationListState extends State<NotificationList> {
                                   notification['title'] ?? '-',
                                   style: TextStyle(
                                     fontSize: 15,
-                                    fontWeight:
-                                        isRead
-                                            ? FontWeight.w500
-                                            : FontWeight.w700,
-                                    color:
-                                        isRead
-                                            ? Colors.grey.shade800
-                                            : Colors.blue.shade900,
+                                    fontWeight: isRead
+                                        ? FontWeight.w500
+                                        : FontWeight.w700,
+                                    color: isRead
+                                        ? Colors.grey.shade800
+                                        : Colors.blue.shade900,
                                     height: 1.3,
                                   ),
                                   maxLines: 2,
@@ -231,6 +225,14 @@ class _NotificationListState extends State<NotificationList> {
                                   ),
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
+                                ),
+                                Text(
+                                  notification['created_on_date'] ?? '',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.grey.shade500,
+                                  ),
                                 ),
                               ],
                             ),
@@ -280,7 +282,6 @@ class _NotificationListState extends State<NotificationList> {
                         ],
                       ),
 
-                      const SizedBox(height: 8),
 
                       // // Additional info or actions
                       // if (notification['type'] != null)

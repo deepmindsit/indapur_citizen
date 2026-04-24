@@ -25,14 +25,11 @@ class GetNotification extends GetxController {
       page.value = 1;
       final prefs = await SharedPreferences.getInstance();
       var user = prefs.getString('user_id');
-      final res = await apiClient.post(
-        Urls.getNotification,
-        {
-          'user_id': user,
-          'lang': language.isEnglish.value ? 'en' : 'mr',
-          'page_no': page.toString()
-        },
-      );
+      final res = await apiClient.post(Urls.getNotification, {
+        'user_id': user,
+        'lang': language.isEnglish.value ? 'en' : 'mr',
+        'page_no': page.toString(),
+      });
       res['common']['status'] == true
           ? notificationList.value = res['data']
           : notificationList.value = [];
@@ -53,14 +50,11 @@ class GetNotification extends GetxController {
       try {
         final prefs = await SharedPreferences.getInstance();
         var user = prefs.getString('user_id');
-        final res = await apiClient.post(
-          Urls.getNotification,
-          {
-            'user_id': user,
-            'lang': language.isEnglish.value ? 'en' : 'mr',
-            'page_no': page.toString()
-          },
-        );
+        final res = await apiClient.post(Urls.getNotification, {
+          'user_id': user,
+          'lang': language.isEnglish.value ? 'en' : 'mr',
+          'page_no': page.toString(),
+        });
 
         final List fetchedPosts = res['data'];
         if (fetchedPosts.isNotEmpty) {
@@ -82,17 +76,14 @@ class GetNotification extends GetxController {
       final prefs = await SharedPreferences.getInstance();
       var user = prefs.getString('user_id');
 
-      final res = await apiClient.post(
-        Urls.readNotification,
-        {
-          'user_id': user,
-          'notification_id': notificationId,
-        },
-      );
+      final res = await apiClient.post(Urls.readNotification, {
+        'user_id': user,
+        'notification_id': notificationId,
+      });
 
       isLoading(false);
       checkLogin(res['user_login']);
-    } finally{
+    } finally {
       isLoading(false);
     }
   }

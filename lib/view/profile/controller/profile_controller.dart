@@ -55,8 +55,6 @@ class ProfileController extends GetxController {
   }
 
   Future getPolicy({required String slug}) async {
-    print('slug');
-    print(slug);
     try {
       isLoading.value = true;
       final res = await apiClient.post(Urls.legalPage, {'slug': slug});

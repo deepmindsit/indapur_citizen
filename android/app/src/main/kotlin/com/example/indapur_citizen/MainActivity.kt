@@ -1,4 +1,4 @@
-package com.example.indapur_citizen
+package com.indapurnp.citizen
 
 import io.flutter.embedding.android.FlutterActivity
 

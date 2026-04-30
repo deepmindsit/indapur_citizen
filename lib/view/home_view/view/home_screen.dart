@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:indapur_citizen/config/exported_path.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
       checkInternetAndShowPopup();
       controller.isSearch.value = false;
       controller.getHome();
-      checkLocationAccess();
+      if (Platform.isAndroid) {
+        checkLocationAccess();
+      }
     });
 
     // UpdateController().checkForUpdate();

@@ -38,7 +38,7 @@ class NotificationService {
       badge: true,
       sound: true,
     );
-    _firebaseMessaging.subscribeToTopic("pnpPublic");
+    // _firebaseMessaging.subscribeToTopic("pnpPublic");
     // Handle initial message (app launched from terminated state)
     final RemoteMessage? initialMessage =
         await _firebaseMessaging.getInitialMessage();

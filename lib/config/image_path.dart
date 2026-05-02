@@ -1,5 +1,5 @@
 class Images {
-  static const splashScreen = 'assets/images/splash_screen.jpg';
+  static const splashScreen = 'assets/images/splash screen.jpg';
   static const logo = 'assets/images/app_logo.png';
   static const logoVert = 'assets/images/logo_512.png';
   static const noInternet = 'assets/images/no_internet_connection.png';
@@ -9,7 +9,7 @@ class Images {
   static const indianFlag = 'assets/images/india_flag.png';
   static const defaultSlider = 'assets/images/default_slider.jpg';
   static const noData = 'assets/images/empty_data.png';
-  static const aboutUs = 'assets/images/about_us_banner.webp';
+  static const aboutUs = 'assets/images/about_us_banner.jpg';
   static const appMaintenance = 'assets/images/app_maintenance.png';
 
   static const appIcon = 'assets/images/app_icon.png';

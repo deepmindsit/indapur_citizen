@@ -199,7 +199,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                           const SizedBox(
                             width: 60,
                             height: 60,
-                            child: CircularProgressIndicator(),
+                            child: CircularProgressIndicator.adaptive(),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 16),

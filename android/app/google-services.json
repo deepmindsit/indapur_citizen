@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "259905382140",
+    "project_id": "indapurnp-1123d",
+    "storage_bucket": "indapurnp-1123d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259905382140:android:256a58529ebf760a379979",
+        "android_client_info": {
+          "package_name": "com.indapurnp.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5h6rlwgR1-sceA0U7Wn2cia-TmxQWK8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259905382140:android:2ba1f3bae383b9c7379979",
+        "android_client_info": {
+          "package_name": "com.indapurnp.citizen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5h6rlwgR1-sceA0U7Wn2cia-TmxQWK8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259905382140:android:6e1701c5ff0142a1379979",
+        "android_client_info": {
+          "package_name": "com.indapurteam.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5h6rlwgR1-sceA0U7Wn2cia-TmxQWK8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

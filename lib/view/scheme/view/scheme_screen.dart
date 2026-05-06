@@ -53,13 +53,13 @@ class _SchemeScreenState extends State<SchemeScreen> {
 
   Widget schemeData() {
     return AnimationLimiter(
-      child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 5.0,
-          mainAxisExtent: Get.height * 0.16,
-          crossAxisSpacing: 5.0, // spacing between columns
-        ),
+      child: ListView.builder(
+        padding: const EdgeInsets.all(8),
+        // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        //   crossAxisCount: 2,
+        //   mainAxisSpacing: 4.0,
+        //   mainAxisExtent: Get.height * 0.17,
+        // ),
         itemCount: controller.schemeList.length,
         itemBuilder: (_, int index) {
           return AnimationConfiguration.staggeredGrid(
@@ -79,12 +79,11 @@ class _SchemeScreenState extends State<SchemeScreen> {
     final link = controller.schemeList[index];
     return GestureDetector(
       onTap: () => Get.to(() => SchemeDetails(slug: link['slug'] ?? '')),
-      // link['url'] != null ? launchInBrowser(Uri.parse(link['url'])) : null,
       child: Card(
         elevation: 0,
-        margin: const EdgeInsets.all(10),
+        // margin: const EdgeInsets.all(8),
         shape: RoundedRectangleBorder(
-          side: const BorderSide(color: Colors.black, width: 0.5),
+          side: const BorderSide(color: Colors.grey, width: 0.2),
           borderRadius: BorderRadius.circular(15),
         ),
         child: linkContent(link),
@@ -95,8 +94,8 @@ class _SchemeScreenState extends State<SchemeScreen> {
   Widget linkContent(var link) {
     return Container(
       width: Get.width * 0.3,
-      height: Get.width * 0.2,
-      padding: const EdgeInsets.all(8),
+      // height: Get.width * 0.2,
+      padding: const EdgeInsets.all(4),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         boxShadow: [
@@ -111,14 +110,16 @@ class _SchemeScreenState extends State<SchemeScreen> {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         spacing: 8,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.network(
               link['image'],
-              height: Get.height * 0.07,
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: Get.height * 0.11,
               errorBuilder: (_, __, ___) => const Icon(Icons.broken_image),
             ),
           ),
@@ -127,7 +128,7 @@ class _SchemeScreenState extends State<SchemeScreen> {
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             maxLines: 2,
-            style: const TextStyle(height: 1),
+            style: const TextStyle(height: 1.2, fontSize: 16),
           ),
         ],
       ),

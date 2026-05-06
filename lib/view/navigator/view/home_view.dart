@@ -45,8 +45,8 @@ class MainScreen extends StatelessWidget {
               ),
               BottomNavigationBarItem(
                 backgroundColor: Colors.white,
-                icon: const HugeIcon(icon: HugeIcons.strokeRoundedLink02),
-                label: 'Links'.tr,
+                icon: const HugeIcon(icon: HugeIcons.strokeRoundedScheme),
+                label: 'Scheme'.tr,
               ),
               BottomNavigationBarItem(
                 backgroundColor: Colors.white,

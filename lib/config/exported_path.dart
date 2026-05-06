@@ -41,6 +41,7 @@ export 'package:indapur_citizen/view/home_view/controller/add_complaint_controll
 export 'package:indapur_citizen/view/home_view/controller/update_firebase_token.dart';
 export 'package:indapur_citizen/view/profile/controller/profile_controller.dart';
 export 'package:indapur_citizen/view/onboarding/controller/splash_controller.dart';
+export 'package:indapur_citizen/view/scheme/controller/scheme_controller.dart';
 
 //widgets//
 export 'package:indapur_citizen/main.dart';

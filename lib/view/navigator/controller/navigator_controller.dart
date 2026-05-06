@@ -1,4 +1,5 @@
 import 'package:indapur_citizen/utils/policy_data.dart';
+import 'package:indapur_citizen/view/scheme/view/scheme_screen.dart';
 
 import '../../../config/exported_path.dart';
 
@@ -14,7 +15,8 @@ class BottomNavigationPageController extends GetxController {
     const AboutUs(),
     //  PolicyData(slug: '',),
     const ComplaintTest(),
-    const Links(),
+    // const Links(),
+    const SchemeScreen(),
     const Profile(),
   ];
 

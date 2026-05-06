@@ -57,7 +57,9 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               _buildListTile(
                 HugeIcons.strokeRoundedLink02,
                 'Important Links',
-                () => bottomNavigationPageController.changePage(3),
+                () => Get.to(() => Links()),
+
+                // bottomNavigationPageController.changePage(3),
               ),
               _divider(),
               _buildListTile(

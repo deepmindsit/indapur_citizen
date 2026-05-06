@@ -36,6 +36,8 @@ import 'package:indapur_citizen/view/onboarding/controller/splash_controller.dar
     as _i976;
 import 'package:indapur_citizen/view/profile/controller/profile_controller.dart'
     as _i1058;
+import 'package:indapur_citizen/view/scheme/controller/scheme_controller.dart'
+    as _i800;
 import 'package:injectable/injectable.dart' as _i526;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -73,6 +75,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i1058.ProfileController>(
       () => _i1058.ProfileController(),
     );
+    gh.lazySingleton<_i800.SchemeController>(() => _i800.SchemeController());
     return this;
   }
 }

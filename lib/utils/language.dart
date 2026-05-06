@@ -5,6 +5,7 @@ class Languages extends Translations {
   Map<String, Map<String, String>> get keys => {
     'en_US': {
       'Recent Complaint': 'Recent Complaint',
+      'Scheme': 'Scheme',
       'Departments': 'Departments',
       'complaint_line':
           'To register your complaint online\n select the appropriate section below.',
@@ -135,6 +136,7 @@ class Languages extends Translations {
           'तुम्हाला खातं हटवायचं आहे का?',
       'Cancel': 'रद्द करा',
       'Yes': 'हो',
+      'Scheme': 'योजना',
       'Recent Complaint': 'शेवटची तक्रार',
       'Search...': 'शोधा...',
       'Departments': 'विभाग',

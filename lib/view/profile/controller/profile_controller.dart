@@ -4,6 +4,7 @@ import '../../../config/exported_path.dart';
 class ProfileController extends GetxController {
   final nameController = TextEditingController();
   final numberController = TextEditingController();
+  final showDeleteButton = true.obs;
   dynamic data;
   final name = ''.obs;
   final isUpdate = false.obs;

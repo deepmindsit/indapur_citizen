@@ -87,7 +87,6 @@ class OnboardingController extends GetxController {
     // Map<String, dynamic> res =
     //     json.decode(response.body) as Map<String, dynamic>;
 
-    developer.log(res.toString());
     return res;
   }
 

@@ -41,17 +41,17 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 'My Profile',
                 () => bottomNavigationPageController.changePage(4),
               ),
-              _divider(),
-              _buildListTile(
-                HugeIcons.strokeRoundedOffice,
-                'Departments',
-                () => bottomNavigationPageController.changePage(0),
-              ),
+              // _divider(),
+              // _buildListTile(
+              //   HugeIcons.strokeRoundedOffice,
+              //   'Departments',
+              //   () => bottomNavigationPageController.changePage(0),
+              // ),
               _divider(),
               _buildListTile(
                 HugeIcons.strokeRoundedUserWarning01,
                 'Complaints',
-                () => bottomNavigationPageController.changePage(2),
+                () => bottomNavigationPageController.changePage(1),
               ),
               _divider(),
               _buildListTile(
@@ -65,14 +65,14 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               _buildListTile(
                 HugeIcons.strokeRoundedInformationCircle,
                 'About Us',
-                () => bottomNavigationPageController.changePage(1),
+                () => bottomNavigationPageController.changePage(3),
               ),
-              _divider(),
-              _buildListTile(
-                HugeIcons.strokeRoundedDelete02,
-                'Delete Account',
-                () => Get.to(() => const DeleteAccount()),
-              ),
+              // _divider(),
+              // _buildListTile(
+              //   HugeIcons.strokeRoundedDelete02,
+              //   'Delete Account',
+              //   () => Get.to(() => const DeleteAccount()),
+              // ),
               _divider(),
               _buildListTile(
                 HugeIcons.strokeRoundedLogout01,

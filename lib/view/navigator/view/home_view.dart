@@ -29,13 +29,7 @@ class MainScreen extends StatelessWidget {
                 icon: HugeIcon(icon: HugeIcons.strokeRoundedHome01),
                 label: 'Home'.tr,
               ),
-              BottomNavigationBarItem(
-                backgroundColor: Colors.white,
-                icon: const HugeIcon(
-                  icon: HugeIcons.strokeRoundedInformationCircle,
-                ),
-                label: 'About Us2'.tr,
-              ),
+
               BottomNavigationBarItem(
                 backgroundColor: Colors.white,
                 icon: const HugeIcon(
@@ -47,6 +41,13 @@ class MainScreen extends StatelessWidget {
                 backgroundColor: Colors.white,
                 icon: const HugeIcon(icon: HugeIcons.strokeRoundedScheme),
                 label: 'Scheme'.tr,
+              ),
+              BottomNavigationBarItem(
+                backgroundColor: Colors.white,
+                icon: const HugeIcon(
+                  icon: HugeIcons.strokeRoundedInformationCircle,
+                ),
+                label: 'About Us2'.tr,
               ),
               BottomNavigationBarItem(
                 backgroundColor: Colors.white,

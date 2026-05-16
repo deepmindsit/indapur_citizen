@@ -12,11 +12,11 @@ class BottomNavigationPageController extends GetxController {
   List<Widget> pages = [
     const HomeScreen(),
 
-    const AboutUs(),
     //  PolicyData(slug: '',),
     const ComplaintTest(),
     // const Links(),
     const SchemeScreen(),
+    const AboutUs(),
     const Profile(),
   ];
 

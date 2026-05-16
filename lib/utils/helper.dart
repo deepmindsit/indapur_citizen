@@ -165,6 +165,8 @@ Future<void> logoutDialog() async {
 
 Future<void> logoutUser() async {
   Get.back();
+  final controller = getIt<OnboardingController>();
+  controller.numberController.clear();
   await LocalStorage.clear();
   Get.snackbar('Logout', 'You have logged out successfully');
   Get.offAll(() => const PageViewWidget());

@@ -132,6 +132,7 @@ class _OtpVerificationState extends State<OtpVerification> with CodeAutoFill {
                       ),
                 SizedBox(height: Get.height * 0.02),
                 _loginButton(),
+                _buildChangeNumber(),
               ],
             ),
           ),
@@ -316,6 +317,18 @@ class _OtpVerificationState extends State<OtpVerification> with CodeAutoFill {
           ),
         ),
       ],
+    );
+  }
+
+  /// ---------------- CHANGE NUMBER ----------------
+  Widget _buildChangeNumber() {
+    return TextButton(
+      onPressed: () {
+        final controller = getIt<OnboardingController>();
+        controller.numberController.clear();
+        Get.offAll(() => const PageViewWidget());
+      },
+      child: Text('Change Number', style: TextStyle(color: Colors.black)),
     );
   }
 }

@@ -274,7 +274,7 @@ class _ComplaintSummaryState extends State<ComplaintSummary> {
       context: context,
       builder: (BuildContext context) {
         return Container(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(24),
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.only(top: 8.0),

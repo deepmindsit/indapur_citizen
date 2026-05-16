@@ -9,7 +9,7 @@ class ComplaintTest extends StatefulWidget {
 
 class _ComplaintTestState extends State<ComplaintTest> {
   final controller = getIt<ComplaintController>();
-
+  BottomNavigationPageController bottomNavigationPageController = Get.find();
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -123,13 +123,44 @@ class _ComplaintTestState extends State<ComplaintTest> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(Images.noData),
-            Text(
-              'No Data Found'.tr,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Colors.grey,
+            Image.asset(Images.noData, height: Get.height * 0.2),
+            // Text(
+            //   'No Data Found'.tr,
+            //   style: const TextStyle(
+            //     fontSize: 18,
+            //     fontWeight: FontWeight.bold,
+            //     color: Colors.grey,
+            //   ),
+            // ),
+            SizedBox(height: Get.height * 0.02),
+            GestureDetector(
+              onTap: () => bottomNavigationPageController.changePage(0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: HugeIcon(
+                        icon: HugeIcons.strokeRoundedAddSquare,
+                        size: 30,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Text(
+                      'Add Complaint'.tr,
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

@@ -85,9 +85,10 @@ class _SchemeDetailsState extends State<SchemeDetails> {
         backgroundColor: Colors.grey.withValues(alpha: 0.1),
         surfaceTintColor: Colors.grey.withValues(alpha: 0.1),
         title: Text(
-          controller.schemeDetails['name'].toString().isNotEmpty
-              ? controller.schemeDetails['name'] ?? ''
-              : 'Scheme Details',
+          // controller.schemeDetails['name'].toString().isNotEmpty
+          //     ? controller.schemeDetails['name'] ?? ''
+          //     :
+          'Scheme Details'.tr,
           style: TextStyle(
             color: Colors.black,
             fontSize: Get.width * 0.07,
@@ -189,37 +190,37 @@ class _SchemeDetailsState extends State<SchemeDetails> {
     );
   }
 
-  String _formatHtml(String html) {
-    // Remove broken html tags
-    html = html
-        .replaceAll('<p><p>', '<p>')
-        .replaceAll('</p></p>', '</p>')
-        .replaceAll(RegExp(r'<p>\s*</p>'), '');
-
-    // Style every anchor tag dynamically
-    html = html.replaceAllMapped(
-      RegExp(r'<a([^>]*)>(.*?)</a>', caseSensitive: false),
-      (match) {
-        final attributes = match.group(1) ?? '';
-        final text = match.group(2) ?? 'Open';
-
-        return '''
-      <a $attributes 
-         style="
-           background:#2196F3;
-           color:white;
-           padding:10px 18px;
-           border-radius:8px;
-           text-decoration:none;
-           display:inline-block;
-           margin-top:8px;
-           font-weight:bold;">
-         $text
-      </a>
-      ''';
-      },
-    );
-
-    return html;
-  }
+  // String _formatHtml(String html) {
+  //   // Remove broken html tags
+  //   html = html
+  //       .replaceAll('<p><p>', '<p>')
+  //       .replaceAll('</p></p>', '</p>')
+  //       .replaceAll(RegExp(r'<p>\s*</p>'), '');
+  //
+  //   // Style every anchor tag dynamically
+  //   html = html.replaceAllMapped(
+  //     RegExp(r'<a([^>]*)>(.*?)</a>', caseSensitive: false),
+  //     (match) {
+  //       final attributes = match.group(1) ?? '';
+  //       final text = match.group(2) ?? 'Open';
+  //
+  //       return '''
+  //     <a $attributes
+  //        style="
+  //          background:#2196F3;
+  //          color:white;
+  //          padding:10px 18px;
+  //          border-radius:8px;
+  //          text-decoration:none;
+  //          display:inline-block;
+  //          margin-top:8px;
+  //          font-weight:bold;">
+  //        $text
+  //     </a>
+  //     ''';
+  //     },
+  //   );
+  //
+  //   return html;
+  // }
 }

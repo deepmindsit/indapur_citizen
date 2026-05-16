@@ -6,6 +6,7 @@ class Languages extends Translations {
     'en_US': {
       'Recent Complaint': 'Recent Complaint',
       'Scheme': 'Scheme',
+      'Scheme Details': 'Scheme Details',
       'Departments': 'Departments',
       'complaint_line':
           'To register your complaint online\n select the appropriate section below.',
@@ -100,7 +101,7 @@ class Languages extends Translations {
       'RTI Application': 'RTI Application',
       'Add New RTI': 'Add New RTI',
       'locationDialog':
-          'The PNP app gathers location information so that users can find nearby locations .',
+          'The INP app gathers location information so that users can find nearby locations .',
       'Please Enter your Details to proceed Further':
           'Please Enter your Details to proceed Further',
       'Use your location': 'Use your location',
@@ -137,6 +138,7 @@ class Languages extends Translations {
       'Cancel': 'रद्द करा',
       'Yes': 'हो',
       'Scheme': 'योजना',
+      'Scheme Details': 'योजना माहिती',
       'Recent Complaint': 'शेवटची तक्रार',
       'Search...': 'शोधा...',
       'Departments': 'विभाग',
@@ -229,7 +231,7 @@ class Languages extends Translations {
       'Add New RTI': 'नवीन आरटीआय जोडा',
       'Use your location': 'तुमचे लोकेशन वापरा',
       'locationDialog':
-          'PNP ॲप स्थान माहिती गोळा करते जेणेकरून वापरकर्ते जवळपासची ठिकाणे शोधू शकतील.',
+          'INP ॲप स्थान माहिती गोळा करते जेणेकरून वापरकर्ते जवळपासची ठिकाणे शोधू शकतील.',
       'Please Enter your Details to proceed Further':
           'पुढे जाण्यासाठी कृपया तुमचे तपशील प्रविष्ट करा',
       'Are you sure ?': 'तुला खात्री आहे ?',

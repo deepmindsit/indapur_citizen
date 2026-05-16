@@ -14,12 +14,17 @@ class _ProfileState extends State<Profile> {
   void initState() {
     super.initState();
 
+    controller.nameFocusNode.addListener(_handleFocus);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       checkInternetAndShowPopup();
       controller.getData();
       controller.isUpdate.value = false;
       controller.isLoading.value = false;
     });
+  }
+
+  void _handleFocus() {
+    controller.showDeleteButton.value = !controller.nameFocusNode.hasFocus;
   }
 
   @override
@@ -30,19 +35,18 @@ class _ProfileState extends State<Profile> {
       body: Obx(
         () => controller.isLoading2.isTrue
             ? LoadingWidget(color: primaryBlack)
-            : AnimationLimiter(
-                child: ListView(
-                  children: AnimationConfiguration.toStaggeredList(
-                    duration: const Duration(milliseconds: 375),
-                    childAnimationBuilder: (widget) => SlideAnimation(
-                      verticalOffset: 50,
-                      child: FadeInAnimation(child: widget),
-                    ),
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+            : Column(
+                children: [
+                  Expanded(
+                    child: AnimationLimiter(
+                      child: ListView(
+                        padding: EdgeInsets.all(12),
+                        children: AnimationConfiguration.toStaggeredList(
+                          duration: const Duration(milliseconds: 375),
+                          childAnimationBuilder: (widget) => SlideAnimation(
+                            verticalOffset: 50,
+                            child: FadeInAnimation(child: widget),
+                          ),
                           children: [
                             title(),
                             SizedBox(height: Get.height * 0.04),
@@ -51,12 +55,48 @@ class _ProfileState extends State<Profile> {
                             nameField(),
                             SizedBox(height: Get.height * 0.02),
                             numberField(controller.numberController.text),
+                            SizedBox(height: Get.height * 0.02),
                           ],
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
+                  Obx(
+                    () => controller.showDeleteButton.value
+                        ? SafeArea(
+                            child: GestureDetector(
+                              onTap: () => Get.to(() => const DeleteAccount()),
+                              child: Container(
+                                margin: const EdgeInsets.all(16),
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: Colors.grey.shade100,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    HugeIcon(
+                                      icon: HugeIcons.strokeRoundedDelete02,
+                                      color: Colors.grey,
+                                      size: 20,
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Text(
+                                      'Delete Account'.tr,
+                                      style: const TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )
+                        : const SizedBox.shrink(),
+                  ),
+                ],
               ),
       ),
     );
